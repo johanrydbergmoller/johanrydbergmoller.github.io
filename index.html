@@ -6,6 +6,7 @@ req.onload = reqListener;
 req.open('GET','https://mory-staging.zeiss.com/emoryservice/api/v1/favourites',true);
 req.withCredentials = true;
 req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+req.setRequestHeader("Origin", "johanrydbergmoller.github.io");
 req.send();
 
 function reqListener() {
